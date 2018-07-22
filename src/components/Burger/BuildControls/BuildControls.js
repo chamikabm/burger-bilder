@@ -12,13 +12,19 @@ const controllers = [
 
 const buildControls = (props) => (
   <div className={classes.BuildControls}>
+    <p>Current Price : <strong>{Math.abs(props.totalPrice.toFixed(2))}</strong></p>
     {
       controllers.map(control => {
-        return <BuildControl key={control.label} label={control.label} />
+        return <BuildControl
+          key={ control.label }
+          label={ control.label }
+          add={ () => props.addIngredinets(control.type) }
+          remove={ () =>  props.remvoeIngredinets(control.type) }
+          disabled={props.disabledInfo[control.type]}
+        />
       })
     }
   </div>
 );
-
 
 export default buildControls;
