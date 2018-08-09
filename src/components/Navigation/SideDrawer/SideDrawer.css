@@ -25,3 +25,7 @@
 .Close {
     transition: translateX(-100%);
 }
+
+.Logo {
+    height: 11%;
+}
