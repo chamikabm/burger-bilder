@@ -4,7 +4,11 @@ class Checkout extends Component {
 
   render () {
 
-    return ();
+    return (
+      <h1>
+
+      </h1>
+    );
   };
 }
 
