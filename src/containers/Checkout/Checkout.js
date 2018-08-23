@@ -7,24 +7,30 @@ import ContactData from './ContactData/ContactData';
 class Checkout extends Component {
 
   state = {
-    ingredients: {
-      salad :1,
-      meat: 1,
-      cheese: 1,
-      bacon: 1,
-    }
+    ingredients: null,
+    totalPrice: 0,
   };
 
-  componentDidMount () {
+  // We change this componentDidMount to componentWillMount as we need to call this method before the child components
+  // are rendered. Because if the child components rendered ingredients will be null and inside the child components it
+  // will throw an error. Since we are changed it to componentWillMount no longer will get an issue as the state for
+  // ingredients it set to a empty order (const ingredients = {};)
+
+  componentWillMount () {
 
     const query = new URLSearchParams(this.props.location.search);
     const ingredients = {};
+    let price = 0;
     for (let param of query.entries()) {
       // param = ['salad' , '0']
-      ingredients[param[0]] = +param[1];
+      if (param[0] === 'price') {
+        price = param[1];
+      } else {
+        ingredients[param[0]] = +param[1];
+      }
     }
 
-    this.setState({ingredients : ingredients});
+    this.setState({ingredients : ingredients, totalPrice : price});
   }
 
   checkoutCancelHandler = () => {
@@ -35,6 +41,9 @@ class Checkout extends Component {
     this.props.history.replace('checkout/contact-data');
   };
 
+  //Inside the render function you can use component prop to load the UI in Route component. But using that we are
+  //unable to any data from parent component to child component. Hence we have to use the Router render prop.
+
   render () {
 
     return (
@@ -44,9 +53,14 @@ class Checkout extends Component {
           checkoutCancelled={this.checkoutCancelHandler}
           checkoutContinued={this.checkoutContinueHandler}
         />
-        <Route path={this.props.match.path + '/contact-data'}>
-          <ContactData/>
-        </Route>
+        <Route
+          path={this.props.match.path + '/contact-data'}
+          render={(props) => ( //Here props will be the extra parameters such as history object.
+            <ContactData
+            ingredients={this.state.ingredients}
+            price={this.state.totalPrice}
+            {...props} // Props is passed as need to access the history object and navigate to main page after save.
+          />)}/>
       </div>
     );
   };
