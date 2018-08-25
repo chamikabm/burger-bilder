@@ -91,7 +91,10 @@ class ContactData extends Component {
             {value : 'pickup', displayValue: 'Pickup'},
           ],
         },
-        value: '',
+        value: 'fastest', // In the react we don`t need to set the selected value in the options list , simply we can pass the value to
+        //select component as a value it manages to select the correct option from the correct options list. Hence we need to pass
+        //the default value as the value to select by default.
+        validation : {},
         valid: true,
       },
     },
@@ -101,6 +104,10 @@ class ContactData extends Component {
 
   checkValidity(value, rules) {
     let isValid = true;
+
+    if (!rules) {
+      return true;
+    }
 
     if (rules.required && isValid) {
       isValid = '' !== value.trim();
