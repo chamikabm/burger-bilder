@@ -16,7 +16,13 @@ class ContactData extends Component {
           type : 'text',
           placeholder : 'Your Name',
         },
-        value: ''
+        value: '',
+        validation : {
+          required: true,
+        },
+        valid: false,
+        touched: false,
+        validationError: 'Please enter a valid Name.',
       },
       street: {
         elementType : 'input',
@@ -24,7 +30,13 @@ class ContactData extends Component {
           type : 'text',
           placeholder : 'Street',
         },
-        value: ''
+        value: '',
+        validation : {
+          required: true,
+        },
+        valid: false,
+        touched: false,
+        validationError: 'Please enter a valid Street Address.',
       },
       zipCode: {
         elementType : 'input',
@@ -32,7 +44,15 @@ class ContactData extends Component {
           type : 'text',
           placeholder : 'Zip Code',
         },
-        value: ''
+        value: '',
+        validation : {
+          required: true,
+          minLength: 5,
+          maxLength: 5,
+        },
+        valid: false,
+        touched: false,
+        validationError: 'Please enter a valid Zip Code.',
       },
       country: {
         elementType : 'input',
@@ -40,7 +60,13 @@ class ContactData extends Component {
           type : 'text',
           placeholder : 'Country',
         },
-        value: ''
+        value: '',
+        validation : {
+          required: true,
+        },
+        valid: false,
+        touched: false,
+        validationError: 'Please enter a valid Country Name.',
       },
       email: {
         elementType : 'input',
@@ -48,7 +74,13 @@ class ContactData extends Component {
           type : 'email',
           placeholder : 'Your E-mail Address',
         },
-        value: ''
+        value: '',
+        validation : {
+          required: true,
+        },
+        valid: false,
+        touched: false,
+        validationError: 'Please enter a valid E-mail.',
       },
       deliveryMethod: {
         elementType : 'select',
@@ -59,11 +91,29 @@ class ContactData extends Component {
             {value : 'pickup', displayValue: 'Pickup'},
           ],
         },
-        value: ''
+        value: '',
       },
     },
     loading: false,
   };
+
+  checkValidity(value, rules) {
+    let isValid = true;
+
+    if (rules.required && isValid) {
+      isValid = '' !== value.trim();
+    }
+
+    if (rules.minLength && isValid) {
+      isValid = value.trim().length >= rules.minLength;
+    }
+
+    if (rules.maxLength && isValid) {
+      isValid = value.trim().length <= rules.maxLength;
+    }
+
+    return isValid;
+  }
 
   orderHandler = (event) => {
     event.preventDefault(); // This stops default behaviour such as reloading page upon clicking the button.
@@ -107,6 +157,8 @@ class ContactData extends Component {
     };
 
     updatedFormElement.value = event.target.value;
+    updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+    updatedFormElement.touched = true;
     updatedOrderForm[inputIdentifier] = updatedFormElement;
 
     this.setState({orderForm : updatedOrderForm});
@@ -132,6 +184,10 @@ class ContactData extends Component {
               elementType={formElement.config.elementType}
               elementConfig={formElement.config.elementConfig}
               value={formElement.config.value}
+              invalid={!formElement.config.valid}
+              shouldValidate={formElement.config.validation}
+              touched={formElement.config.touched}
+              validationError={formElement.config.validationError}
               changed={(event) => this.inputChangedHandler(event, formElement.id)}
             />;
           })
