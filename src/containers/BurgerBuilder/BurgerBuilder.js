@@ -51,17 +51,21 @@ class BurgerBuilder extends Component {
 
   purchaseContinueHandler = () => {
 
-    const queryParams = [];
-    for (let i in this.props.ings) {
-      queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.props.ings[i]));
-    }
-    queryParams.push('price=' + this.props.total);
-    const queryString = queryParams.join('&');
+    // const queryParams = [];
+    // for (let i in this.props.ings) {
+    //   queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.props.ings[i]));
+    // }
+    // queryParams.push('price=' + this.props.total);
+    // const queryString = queryParams.join('&');
 
-    this.props.history.push({
-      pathname: '/checkout',
-      search: '?' + queryString,
-    });
+    // this.props.history.push({
+    //   pathname: '/checkout',
+    //   search: '?' + queryString,
+    // });
+
+    //Since we have introduced redux into the application we no longer required to send the query parameters.
+
+    this.props.history.push('/checkout');
   };
 
   render () {
