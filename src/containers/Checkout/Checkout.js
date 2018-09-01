@@ -67,7 +67,7 @@ class Checkout extends Component {
           //   ingredients={this.props.ings}
           //   price={this.props.price}
           //   {...props} // Props is passed as need to access the history object and navigate to main page after save.
-          />)}/>
+          />
       </div>
     );
   };
