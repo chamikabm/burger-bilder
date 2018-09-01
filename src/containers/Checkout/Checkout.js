@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route }from 'react-router-dom';
+import { Route, Redirect }from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
@@ -49,34 +49,39 @@ class Checkout extends Component {
   //Inside the render function you can use component prop to load the UI in Route component. But using that we are
   //unable to any data from parent component to child component. Hence we have to use the Router render prop.
 
-  render () {
+  render() {
 
-    return (
-      <div>
-        <CheckoutSummary
-          ingredients={this.props.ings}
-          checkoutCancelled={this.checkoutCancelHandler}
-          checkoutContinued={this.checkoutContinueHandler}
-        />
-        <Route
-          path={this.props.match.path + '/contact-data'}
-          component={ContactData}
-          //After introducing the redux no longer need  tricks to pass data.
-          // render={(props) => ( //Here props will be the extra parameters such as history object.
-          //   <ContactData
-          //   ingredients={this.props.ings}
-          //   price={this.props.price}
-          //   {...props} // Props is passed as need to access the history object and navigate to main page after save.
+    let summary = <Redirect to='/'/>;
+
+    if (this.props.ings) {
+      summary =
+        <div>
+          <CheckoutSummary
+            ingredients={this.props.ings}
+            checkoutCancelled={this.checkoutCancelHandler}
+            checkoutContinued={this.checkoutContinueHandler}
           />
-      </div>
-    );
+          <Route
+            path={this.props.match.path + '/contact-data'}
+            component={ContactData}
+            //After introducing the redux no longer need  tricks to pass data.
+            // render={(props) => ( //Here props will be the extra parameters such as history object.
+            //   <ContactData
+            //   ingredients={this.props.ings}
+            //   price={this.props.price}
+            //   {...props} // Props is passed as need to access the history object and navigate to main page after save.
+          />
+        </div>
+    }
+
+    return summary;
   };
 }
 
 const mapStateToProps = state => {
 
   return {
-    ings: state.ingredients,
+    ings: state.burgerBuilder.ingredients,
   }
 };
 
