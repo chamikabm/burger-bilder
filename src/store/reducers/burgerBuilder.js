@@ -39,7 +39,7 @@ const burgerBuilder = (state = initialState, action) => {
         ...state,
         ingredients: action.ingredients,
         error: false,
-        totalPrice: 0, // Reset the price after the navigation.
+        totalPrice: 0, // Reset the price after the navigation. [componentDidMount]
       };
     case actionTypes.FETCH_INGREDIENT_FAILED:
       return {
