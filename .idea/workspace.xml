@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="592f2b71-1f36-4e70-aaea-d4f2e829f99e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/Auth/Logout/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,13 +16,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="order.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/order.js">
+      <file leaf-file-name="BurgerBuilder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+            <state relative-caret-position="151">
+              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Auth.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/Auth/Auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="139" column="76" lean-forward="true" selection-start-line="139" selection-start-column="76" selection-end-line="139" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,8 +43,8 @@
       <file leaf-file-name="Layout.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hoc/Layout/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="150">
+              <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -40,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SideDrawer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Navigation/SideDrawer/SideDrawer.js">
+      <file leaf-file-name="BuildControls.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -61,15 +73,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Toolbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Navigation/Toolbar/Toolbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/actions/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,8 +85,8 @@
       <file leaf-file-name="NavigationItems.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="150">
+              <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -91,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavigationItem.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NavigationItem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -115,8 +118,8 @@
       <file leaf-file-name="Logout.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Auth/Logout/Logout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="345">
+              <caret line="23" column="49" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="49" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -128,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>css</find>
       <find>clicked</find>
       <find>drawerToggleClicked</find>
       <find>Ingredient</find>
@@ -158,6 +160,7 @@
       <find>fetchOrders</find>
       <find>getState</find>
       <find>connect</find>
+      <find>&lt;form</find>
     </findStrings>
     <replaceStrings>
       <replace>Loader</replace>
@@ -172,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Burger/Ingredient/Ingredient.css" />
         <option value="$PROJECT_DIR$/src/components/Logo/Logo.css" />
         <option value="$PROJECT_DIR$/src/components/Navigation/NavaigationItems/NavigationItem/NavigationItem.css" />
         <option value="$PROJECT_DIR$/src/components/Navigation/NavaigationItems/NavigationItems.css" />
@@ -202,7 +204,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" />
         <option value="$PROJECT_DIR$/src/store/actions/burgerBuilder.js" />
-        <option value="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" />
         <option value="$PROJECT_DIR$/src/store/utility.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/order.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/burgerBuilder.js" />
@@ -210,19 +211,21 @@
         <option value="$PROJECT_DIR$/src/containers/Auth/Auth.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Input/Input.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/src/store/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/actions/auth.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/auth.js" />
         <option value="$PROJECT_DIR$/src/containers/Orders/Orders.js" />
         <option value="$PROJECT_DIR$/src/store/actions/order.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js" />
         <option value="$PROJECT_DIR$/src/hoc/Layout/Layout.js" />
         <option value="$PROJECT_DIR$/src/components/Navigation/SideDrawer/SideDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/Navigation/Toolbar/Toolbar.js" />
         <option value="$PROJECT_DIR$/src/store/actions/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Auth/Logout/Logout.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js" />
+        <option value="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" />
+        <option value="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js" />
+        <option value="$PROJECT_DIR$/src/containers/Auth/Auth.js" />
       </list>
     </option>
   </component>
@@ -339,6 +342,13 @@
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="Auth" type="462c0819:PsiDirectoryNode" />
               <item name="Logout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="burger-bilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="burger-bilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="BurgerBuilder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="burger-bilder" type="b2602c69:ProjectViewProjectNode" />
@@ -491,12 +501,12 @@
       <workItem from="1535647678681" duration="4329000" />
       <workItem from="1535734262554" duration="1208000" />
       <workItem from="1535774606709" duration="2482000" />
-      <workItem from="1536059867334" duration="6349000" />
+      <workItem from="1536059867334" duration="7324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97440000" />
+    <option name="totallyTimeSpent" value="98415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -575,7 +585,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/containers/Auth/Auth.js</url>
-          <line>132</line>
+          <line>137</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -691,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Burger/OrderSummary/OrderSummary.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -740,16 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="137" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -839,16 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Auth/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/actionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -903,16 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hoc/Layout/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Navigation/SideDrawer/SideDrawer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -924,16 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Auth/Logout/Logout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -957,20 +920,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="30" />
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hoc/Layout/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Auth/Logout/Logout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="151">
+          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Auth/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="139" column="76" lean-forward="true" selection-start-line="139" selection-start-column="76" selection-end-line="139" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
