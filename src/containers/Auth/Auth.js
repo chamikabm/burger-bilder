@@ -121,7 +121,7 @@ class Auth extends Component {
 
     return (
       <div className={classes.Auth}>
-        <form onSubmit={this.submitHandler}>
+        <form onSubmit={this.authHandler}>
           {form}
           <Button btnType="Success">SUBMIT</Button>
         </form>
@@ -147,4 +147,4 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Auth);
+export default connect(null, mapDispatchToProps)(Auth);
