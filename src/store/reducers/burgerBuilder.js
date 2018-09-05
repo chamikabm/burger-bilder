@@ -11,6 +11,7 @@ const initialState = {
   ingredients: null,
   totalPrice: 0,
   error: false,
+  building: false,
 };
 
 const burgerBuilder = (state = initialState, action) => {
@@ -24,6 +25,7 @@ const burgerBuilder = (state = initialState, action) => {
           [action.ingredientName] : state.ingredients[action.ingredientName] + 1,
         },
         totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName],
+        building: true,
       };
     case actionTypes.REMOVE_INGREDIENT:
       return {
@@ -33,6 +35,7 @@ const burgerBuilder = (state = initialState, action) => {
           [action.ingredientName] : state.ingredients[action.ingredientName] - 1,
         },
         totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName],
+        building: true,
       };
     case actionTypes.SET_INGREDIENT:
       return {
@@ -40,6 +43,7 @@ const burgerBuilder = (state = initialState, action) => {
         ingredients: action.ingredients,
         error: false,
         totalPrice: 0, // Reset the price after the navigation. [componentDidMount]
+        building: false,
       };
     case actionTypes.FETCH_INGREDIENT_FAILED:
       return {
