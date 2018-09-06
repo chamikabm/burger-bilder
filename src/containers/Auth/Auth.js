@@ -6,6 +6,7 @@ import * as actions from '../../store/actions/index';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import { checkValidity } from '../../store/utility';
 
 import classes from './Auth.css';
 
@@ -54,28 +55,6 @@ class Auth extends Component {
     }
   }
 
-  checkValidity(value, rules) {
-    let isValid = true;
-
-    if (!rules) {
-      return true;
-    }
-
-    if (rules.required && isValid) {
-      isValid = '' !== value.trim();
-    }
-
-    if (rules.minLength && isValid) {
-      isValid = value.trim().length >= rules.minLength;
-    }
-
-    if (rules.maxLength && isValid) {
-      isValid = value.trim().length <= rules.maxLength;
-    }
-
-    return isValid;
-  }
-
   authHandler = (event) => {
     event.preventDefault(); // This stops default behaviour such as reloading page upon clicking the button.
 
@@ -91,7 +70,7 @@ class Auth extends Component {
       [controlName]: {
         ...this.state.controls[controlName],
         value: event.target.value,
-        valid: this.checkValidity(event.target.value, this.state.controls[controlName].validation),
+        valid: checkValidity(event.target.value, this.state.controls[controlName].validation),
         touched: true,
       }
     };

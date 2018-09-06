@@ -9,6 +9,7 @@ import classes from './ContactData.css';
 import axios from "../../../axios-orders";
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as actionCreators from '../../../store/actions/index';
+import { checkValidity } from '../../../store/utility';
 
 class ContactData extends Component {
 
@@ -105,28 +106,6 @@ class ContactData extends Component {
     formIsValid: false,
   };
 
-  checkValidity(value, rules) {
-    let isValid = true;
-
-    if (!rules) {
-      return true;
-    }
-
-    if (rules.required && isValid) {
-      isValid = '' !== value.trim();
-    }
-
-    if (rules.minLength && isValid) {
-      isValid = value.trim().length >= rules.minLength;
-    }
-
-    if (rules.maxLength && isValid) {
-      isValid = value.trim().length <= rules.maxLength;
-    }
-
-    return isValid;
-  }
-
   orderHandler = (event) => {
     event.preventDefault(); // This stops default behaviour such as reloading page upon clicking the button.
     console.log(this.props.ingredients);
@@ -158,7 +137,7 @@ class ContactData extends Component {
     };
 
     updatedFormElement.value = event.target.value;
-    updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+    updatedFormElement.valid = checkValidity(updatedFormElement.value, updatedFormElement.validation);
     updatedFormElement.touched = true;
     updatedOrderForm[inputIdentifier] = updatedFormElement;
 
