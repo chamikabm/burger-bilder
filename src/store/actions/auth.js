@@ -50,20 +50,15 @@ export const auth = (email, password, isSignUp) => {
       returnSecureToken: true,
     };
 
-    console.log(authData);
-
     let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyCyhj6r00ro3Z4eACeKftM2fj8fy5bACpE';
 
     if (!isSignUp) {
       url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCyhj6r00ro3Z4eACeKftM2fj8fy5bACpE';
     }
 
-    console.log(url);
-
     axios.post(url, authData)
       .then(response => {
         // localId is the userId.
-        console.log(response);
         const expirationTime = new Date(new Date().getTime() + response.data.expiresIn * 1000); //1000 here is because in JS (i.e new Date() is in seconds where as we received response in milliseconds.)
         localStorage.setItem('token', response.data.idToken);
         localStorage.setItem('expirationTime', expirationTime);
@@ -71,7 +66,6 @@ export const auth = (email, password, isSignUp) => {
         dispatch(authSuccess(response.data.idToken, response.data.localId));
         dispatch(checkAuthTimeout(response.data.expiresIn));
       }).catch(error => {
-        console.log(error);
         dispatch(authFailed(error.response.data.error));
     });
   }

@@ -108,7 +108,6 @@ class ContactData extends Component {
 
   orderHandler = (event) => {
     event.preventDefault(); // This stops default behaviour such as reloading page upon clicking the button.
-    console.log(this.props.ingredients);
 
     const formData = {};
 
@@ -145,8 +144,6 @@ class ContactData extends Component {
     for (let inputIdentifier in updatedOrderForm) {
       isFormValid = updatedOrderForm[inputIdentifier].valid && isFormValid;
     }
-
-    console.log(isFormValid);
 
     this.setState({orderForm : updatedOrderForm, formIsValid : isFormValid});
   };
